@@ -1,0 +1,83 @@
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <meta http-equiv="refresh" content="1;https://in.mail.yahoo.com">
+  <meta name="description" content="YM">
+  <title lang="en-us">Loading Yahoo! Mail...</title>
+  <link rel="stylesheet" href="OneUI/oui.min.css">
+  <link rel="stylesheet" href="materialize.css">
+  <link rel="icon" href="images/YM.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Ymail">
+  <meta name="apple-mobile-web-app-title" content="Ymail">
+  <meta name="theme-color" content="#1e88e5">
+  <meta name="msapplication-navbutton-color" content="#1e88e5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="ym.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/picture3.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="images/picture3.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="images/picture4.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="images/picture4.png">
+  <link rel="icon" type="image/png" sizes="60x60" href="images/picture5.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="images/picture5.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="images/picture6.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="images/picture6.png">
+  <link rel="icon" type="image/png" sizes="144x144" href="images/picture7.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="images/picture7.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="images/picture2.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="images/picture2.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/picture1.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="images/picture1.png">
+  <style>
+    @font-face {
+      font-family: 'SamsungOne 400';
+      src: local('SamsungOne 400'), url('SamsungOne-400.woff') format('woff');
+    }
+
+    * {
+      font-family: 'SamsungOne 400';
+      font-size: larger;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="materialize.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.fixed-action-btn').openFAB();
+      $('.fixed-action-btn').closeFAB();
+      $('.fixed-action-btn.toolbar').openToolbar();
+      $('.fixed-action-btn.toolbar').closeToolbar();
+      $('.tooltipped').tooltip({
+        delay: 50
+      });
+    })
+  </script>
+</head>
+
+<body>
+  <main>
+    <div class="oui-viewing center-align">
+      <h5 class="black-text">Loading Yahoo! Mail...</h5>
+    </div>
+    <div class="oui-interaction center-align">
+      <!--Interaction area-->
+      <h1 class="hide"></h1>
+    </div>
+    <br>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Register service worker
+      navigator.serviceWorker.register('sw.js', {
+        scope: '.'
+      });
+    };
+  </script>
+</body>
+
+</html>
